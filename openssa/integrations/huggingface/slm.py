@@ -76,6 +76,7 @@ class SLM(BaseSLM):
         if 'amazonaws' in self.model_url or 'aitomatic' in self.model_url:
             headers['x-api-key'] = self.model_server_token
         else:
+            print('='*10)
             headers['Authorization'] = f'Bearer {self.model_server_token}'
 
         response = request(method="POST",

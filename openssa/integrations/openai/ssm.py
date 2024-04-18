@@ -113,7 +113,7 @@ class SLM(_AbstractSLM):
             # api_key=self.api_context.key,
             # api_base=self.api_context.base,
             # api_version=self.api_context.version,
-            # model=self.api_context.model,
+            model=self.api_context.model,
             # engine=self.api_context.engine,
             max_tokens=self.api_context.max_tokens,
             temperature=self.api_context.temperature,

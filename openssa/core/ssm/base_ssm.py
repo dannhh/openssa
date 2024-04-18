@@ -210,7 +210,10 @@ class BaseSSM(AbstractSSM):
             conversation.extend(user_input)
 
         if reply is not None:
+            reply = {'role': 'assistant', 'content': reply}
             conversation.append(reply)
+            
+        return conversation
 
     def custom_discuss(self, user_input: list[dict], conversation: list[dict]) -> tuple[dict, list[dict]]:
         """

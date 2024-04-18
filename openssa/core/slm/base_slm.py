@@ -34,6 +34,9 @@ class BaseSLM(AbstractSLM):
         Add the user_input to the conversation, sends the whole conversation
         to the language model, and returns the reply.
         """
+        print("User input: ", user_input)
+        print("Conversation: ", conversation)
+
         conversation.extend(user_input)
         result = self._call_lm_api(conversation)
         conversation.pop()

@@ -12,8 +12,10 @@ from util import enable_batch_qa, log_qa_and_update_output_file
 
 
 EMBED_MODEL = OpenAIEmbedding(model='text-embedding-3-large',
-                              api_key=os.environ['AITO_KEY'],
-                              api_base=f'http://{os.environ['AITO_HOST']}:8000/v1_aito')
+                              api_key=os.environ['OPENAI_API_KEY'],
+                            #   api_key=os.environ['AITO_KEY'],
+                            #   api_base=f'http://{os.environ['AITO_HOST']}:8000/v1_aito'
+                            )
 
 
 @cache

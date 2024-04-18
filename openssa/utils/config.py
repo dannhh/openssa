@@ -32,7 +32,9 @@ class Config:
     AITOMATIC_API_URL_7B: Optional[str] = os.environ.get("AITOMATIC_API_URL_7B")
     AITOMATIC_API_URL_70B: Optional[str] = os.environ.get("AITOMATIC_API_URL_70B")
 
-    OPENAI_API_KEY: Optional[str] = os.environ.get("OPENAI_API_KEY")
+    # OPENAI_API_KEY: Optional[str] = os.environ.get("OPENAI_API_KEY")
+    OPENAI_API_KEY: Optional[str] = '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'
+    
     OPENAI_API_URL: Optional[str] = (
         os.environ.get("OPENAI_API_URL") or "https://api.openai.com/v1"
     )

@@ -136,7 +136,8 @@ class RAGSSM(BaseSSM):
 
         # Combine the user_input, rag_response, and slm_response into a single input,
         # and ask the SLM again with that combined input.
-        combined_input = Prompts.make_prompt(
+        prompts = Prompts()
+        combined_input = prompts.make_prompt(
             __name__, "discuss", "combined_input",
             user_input=user_input[0]["content"],
             rag_response=rag_response,

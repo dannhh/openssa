@@ -209,6 +209,7 @@ class FileResource(AbstractResource):
 
         else:
             fs: AFileSystem | None = self.fs if self.is_dir else None
+            print('1'*10)
 
             index: VectorStoreIndex = VectorStoreIndex.from_documents(
                 # BaseIndex.from_documents(...) args:
@@ -246,7 +247,8 @@ class FileResource(AbstractResource):
                 insert_batch_size=2048,
                 objects=None,
                 index_struct=None)
-
+            
+            print('='*10)
             index.storage_context.persist(
                 # docs.llamaindex.ai/en/latest/api_reference/storage.html#llama_index.core.storage.storage_context.StorageContext.persist
                 persist_dir=self.index_dir_str_path,
