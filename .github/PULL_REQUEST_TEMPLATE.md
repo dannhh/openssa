@@ -1,6 +1,10 @@
 ---
 name: Pull request
+<<<<<<< HEAD
 about: Contribute to the SSA project
+=======
+about: Contribute to the OpenSSM project
+>>>>>>> 3354a26 (Add dot files)
 
 ---
 
